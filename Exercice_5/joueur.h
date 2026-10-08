@@ -36,7 +36,12 @@ public:
     // Renvoie true si le joueur a effectivement couru.
     bool courir()
     {
-        // TODO : verifier l'endurance, la depenser, renvoyer le bon resultat.
+        //TODO : verifier l'endurance, la depenser, renvoyer le bon resultat.
+
+        if (endurance_ >= 10) {
+            endurance_ = std::max(0, endurance_ - 10);
+        }else std::println("Trop fatigue pour courir");
+
         return false;
     }
 
