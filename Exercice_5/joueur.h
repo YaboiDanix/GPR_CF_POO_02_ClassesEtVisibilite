@@ -49,7 +49,10 @@ public:
     // Se reposer remonte l'endurance jusqu'au maximum, jamais au-dela.
     void seReposer()
     {
-        // TODO
+        endurance_ += 9999;
+        if (endurance_ >= 50) {
+            endurance_ = 50;
+        }
     }
 
     // -------------------------------------------------------- 3. ouvrir porte
