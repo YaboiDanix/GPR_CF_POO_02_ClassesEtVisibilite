@@ -75,7 +75,10 @@ public:
     // Renvoie true si l'achat a eu lieu.
     bool acheter(int prix)
     {
-        // TODO
+        if (or_ >= prix) {
+            or_ -= prix;
+            return true;
+        }
         return false;
     }
 
@@ -83,7 +86,7 @@ public:
     // Les points de vie restent entre 0 et le maximum, quoi qu'il arrive.
     void subirDegats(int degats)
     {
-        // TODO
+        vie_ = std::max(0,vie_ - degats);
     }
 
     // --------------------------------------------------------------- lecture
