@@ -40,8 +40,8 @@ public:
 
         if (endurance_ >= 10) {
             endurance_ = std::max(0, endurance_ - 10);
-        }else std::println("Trop fatigue pour courir");
-
+            return true;
+        }
         return false;
     }
 
@@ -61,7 +61,11 @@ public:
     // Renvoie true si la porte s'est ouverte.
     bool ouvrirPorte()
     {
-        // TODO
+        if (cles_ >= 1) {
+            cles_ -= 1;
+            return true;
+        }
+
         return false;
     }
 
