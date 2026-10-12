@@ -94,8 +94,10 @@ public:
     // Ces deux methodes ne modifient rien : elles sont `const`.
     bool estVivant() const
     {
-        // TODO
-        return true;
+        if (vie_ > 0) {
+            return true;
+        }
+        return false;
     }
 
     void afficherFiche() const
